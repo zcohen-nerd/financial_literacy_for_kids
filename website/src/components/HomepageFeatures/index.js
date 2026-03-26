@@ -90,6 +90,7 @@ const literacyLinks = [
     label: 'Financial Literacy',
     icon: '💰',
     href: 'https://zcohen-nerd.github.io/financial_literacy_for_kids/',
+    isCurrent: true,
     description:
       'How money works and how to make responsible financial decisions.',
   },
@@ -121,16 +122,17 @@ function RoadmapCard({title, weeks, description}) {
   );
 }
 
-function LiteracyCard({label, icon, href, description}) {
+function LiteracyCard({label, icon, href, description, isCurrent}) {
   return (
     <article className={styles.card}>
       <Heading as="h3">
-        <Link to={href} className={styles.literacyLink}>
+        <Link href={href} className={styles.literacyLink}>
           <span className={styles.literacyIcon} aria-hidden="true">
             {icon}
           </span>{' '}
           {label}
         </Link>
+        {isCurrent && <span className={styles.currentBadge}>Current curriculum</span>}
       </Heading>
       <p>{description}</p>
     </article>
@@ -166,13 +168,13 @@ export default function HomepageFeatures() {
           <p className={styles.sectionLead}>
             Each curriculum focuses on a different foundational life skill. You can
             explore the full curriculum collection through the{' '}
-            <Link to="https://zcohen-nerd.github.io/literacy_for_kids/">
+            <Link href="https://zcohen-nerd.github.io/literacy_for_kids/">
               Literacy for Kids Hub
             </Link>
             .
           </p>
           <div className={styles.callout}>
-            <Heading as="h3">Explore the Other Literacies</Heading>
+            <Heading as="h3">Explore the other literacies</Heading>
             <div className={styles.cardGrid}>
               {literacyLinks.map((literacy) => (
                 <LiteracyCard key={literacy.label} {...literacy} />

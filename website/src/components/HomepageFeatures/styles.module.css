@@ -139,6 +139,18 @@
   font-size: 1.15em;
 }
 
+.currentBadge {
+  display: inline-block;
+  margin-left: 0.65rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 169, 0.12);
+  color: var(--ifm-color-primary-darkest);
+  font-size: 0.78rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 996px) {
   .section,
   .sectionAlt,
