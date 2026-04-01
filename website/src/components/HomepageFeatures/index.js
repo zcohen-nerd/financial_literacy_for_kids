@@ -68,38 +68,38 @@ const literacyLinks = [
   {
     label: 'Decision Literacy',
     icon: '🧠',
-    href: 'https://zcohen-nerd.github.io/decision_literacy_for_kids/',
+    href: 'https://literacy-for-kids.github.io/decision_literacy_for_kids/',
     description:
-      'How to think clearly, evaluate choices, and understand consequences.',
+      'Thinking clearly and evaluating choices.',
   },
   {
     label: 'Computer Literacy',
     icon: '💻',
-    href: 'https://zcohen-nerd.github.io/computer_literacy_for_kids/',
+    href: 'https://literacy-for-kids.github.io/computer_literacy_for_kids/',
     description:
-      'How computers work and how to use them responsibly.',
+      'Understanding technology and how computers work.',
   },
   {
     label: 'Media Literacy',
     icon: '📰',
-    href: 'https://zcohen-nerd.github.io/media_literacy_for_kids/',
+    href: 'https://literacy-for-kids.github.io/media_literacy_for_kids/',
     description:
-      'How to evaluate information and recognize bias.',
+      'Understanding information systems and evaluating sources.',
   },
   {
     label: 'Financial Literacy',
     icon: '💰',
-    href: 'https://zcohen-nerd.github.io/financial_literacy_for_kids/',
+    href: 'https://literacy-for-kids.github.io/financial_literacy_for_kids/',
     isCurrent: true,
     description:
-      'How money works and how to make responsible financial decisions.',
+      'Understanding money and financial decisions.',
   },
   {
     label: 'Civic Literacy',
     icon: '🏛',
-    href: 'https://zcohen-nerd.github.io/civic_literacy_for_kids/',
+    href: 'https://literacy-for-kids.github.io/civic_literacy_for_kids/',
     description:
-      'How societies organize themselves and how citizens shape their communities.',
+      'Understanding governance and communities.',
   },
 ];
 
@@ -159,19 +159,17 @@ export default function HomepageFeatures() {
 
       <section className={styles.sectionAlt}>
         <div className="container">
-          <Heading as="h2">Part of the Literacy for Kids Project</Heading>
+          <Heading as="h2">Part of the Literacy for Kids Ecosystem</Heading>
           <p className={styles.sectionLead}>
-            This curriculum is part of Literacy for Kids, a collection of open-source
-            curricula designed to help children ages 8–12 understand the systems that
-            shape the modern world.
+            This curriculum is part of{' '}
+            <Link href="https://literacy-for-kids.github.io/literacy_for_kids/">
+              Literacy for Kids
+            </Link>
+            , a collection of open-source curricula designed to help children
+            ages 8–12 understand the systems that shape the modern world.
           </p>
           <p className={styles.sectionLead}>
-            Each curriculum focuses on a different foundational life skill. You can
-            explore the full curriculum collection through the{' '}
-            <Link href="https://zcohen-nerd.github.io/literacy_for_kids/">
-              Literacy for Kids Hub
-            </Link>
-            .
+            Each curriculum explores a foundational literacy:
           </p>
           <div className={styles.callout}>
             <Heading as="h3">Explore the other literacies</Heading>
@@ -236,7 +234,7 @@ export default function HomepageFeatures() {
           </div>
           <p className={styles.feedbackPrompt}>
             Found a mistake or have a suggestion?{' '}
-            <Link to="https://github.com/zcohen-nerd/financial_literacy_for_kids/issues">
+            <Link to="https://github.com/literacy-for-kids/financial_literacy_for_kids/issues">
               Open an issue on GitHub.
             </Link>
           </p>
