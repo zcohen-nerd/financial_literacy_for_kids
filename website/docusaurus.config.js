@@ -8,6 +8,8 @@ import path from 'path';
 import {createRequire} from 'module';
 import {fileURLToPath} from 'url';
 import {themes as prismThemes} from 'prism-react-renderer';
+import navbarItems from 'literacy-site-theme/navbarItems';
+import footerConfig from 'literacy-site-theme/footerConfig';
 
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -118,6 +120,29 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/hero-image.png',
+      navbar: {
+        title: 'Financial Literacy for Kids',
+        logo: {
+          alt: 'Financial Literacy Logo',
+          src: 'img/logo.svg',
+        },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'curriculumSidebar',
+            position: 'left',
+            label: 'Curriculum',
+          },
+          {to: '/blog', label: 'Blog', position: 'left'},
+          ...navbarItems,
+          {
+            href: 'https://github.com/zcohen-nerd/financial_literacy_for_kids',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
+      },
+      footer: footerConfig,
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
